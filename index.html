@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Страница запроса</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {height: 450px}
+      /* On small screens, set height to 'auto' for sidenav and grid */
+      @media screen and (max-width: 767px) {
+        .row.content {height:auto;} 
+      }
+    </style>
+  </head>
+  <body>  
+    <div class="container-fluid text-center">    
+      <div class="row content">
+        <div class="col-sm-2">
+          <!-- -->
+        </div>
+        <div class="col-sm-8 text-left"> 
+          <h1 style="text-align: center; ">Запрос данных</h1>
+          <form class="form-horizontal" action="table.html" role="form">
+            <div class="form-group">
+              <label for="inputRequest" class="col-sm-4 control-label" style="text-align: left;"> 1. Номер запроса</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="inputRequest" required>
+                     
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputFIO" class="col-sm-4 control-label" style="text-align: left;">2.ФИО,сотрудника сформировавшего запрос</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="inputFIO" required>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="inputDepartment" class="col-sm-4 control-label" style="text-align: left;">3.Отдел, сформировавший запрос</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="inputDepartment" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputDevice" class="col-sm-4 control-label" style="text-align: left;">4.Наименование утройства</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="inputDevice">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputDate" class="col-sm-4 control-label" style="text-align: left;">5.Дата ввода в экплуатацию</label>
+              <div class="col-sm-4">
+                <input type="date" class="form-control" id="inputDate">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputItemNum" class="col-sm-4 control-label" style="text-align: left;">6.Артикул</label>
+              <div class="col-sm-4">
+                <input type="number" class="form-control" id="inputItemNum">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputCode" class="col-sm-4 control-label" style="text-align: left;">7.Код производителя</label>
+              <div class="col-sm-4">
+                <input type="number" class="form-control" id="inputCode">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputSerialNum" class="col-sm-4 control-label" style="text-align: left;">8.Серийный номер</label>
+              <div class="col-sm-4">
+                <input type="number" class="form-control" id="inputSerialNum">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPlacement" class="col-sm-4 control-label" style="text-align: left;">9.Место установки/хранения</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="inputPlacement">
+              </div>
+            </div>
+            <form>
+              <p><input type="submit" value="Отправить"></p>
+              <!--<input type="button" value="Отправить" onClick='location.href="file:///C:/Users/SLeshchenko-ki14/Documents/GitHub/Table_site/table.html"'>
+              -->
+            </form>
+          </form>
+        </div>
+        <div class="col-sm-2 ">
+          <!-- -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

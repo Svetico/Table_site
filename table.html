@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Результат запроса</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {height: 450px}
+
+      /* Set black background color, white text and some padding */
+      footer {
+        background-color: #555;
+        color: white;
+        padding: 15px;
+      }
+
+      /* On small screens, set height to 'auto' for sidenav and grid */
+      @media screen and (max-width: 767px) {
+        .sidenav {
+          height: auto;
+          padding: 15px;
+        }
+        .row.content {height:auto;} 
+      }
+    </style>
+
+    <script>
+      function isEmail() {
+        var str = document.getElementById("email").value;
+        var status = document.getElementById("status");
+        var re = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+        if (re.test(str)) status.innerHTML = "Адрес правильный";
+          else status.innerHTML = "Адрес неверный";
+        if(isEmpty(str)) status.innerHTML = "Поле пустое";
+      }
+      function isEmpty(str){
+        return (str == null) || (str.length == 0);
+      }
+    </script>
+
+  </head>
+  <body>
+    <div class="container-fluid text-center">    
+      <div class="row content">
+        <div class="col-sm-10 text-left">    
+          <h3 style="text-align: center; ">Таблица</h3>
+          <table class="table table-bordered table-hover hidden-sm hidden-xs">
+            <thead>
+              <tr class="hidden-sm hidden-xs">
+                <th>№п/п</th>
+                <th>Номер запроса</th>
+                <th>ФИО сотрудника</th>
+                <th>Отдел</th>
+                <th>Наименование устройства</th>
+                <th>Дата ввода в эксплуатацию</th>
+                <th>Артикул</th>
+                <th>Код производителя</th>
+                <th>Серийный номер</th>
+                <th>Место установки/хранения</th>
+                <th>Отметка об исполнения</th>
+              </tr>
+              <tr>
+                <th>1</th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th><button onclick="execute()">Исполнено</button></th>
+              </tr>
+              <tr>
+                <th>2</th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th><button onclick="execute()">Исполнено</button></th>
+              </tr>
+              <tr>
+                <th>3</th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th><button onclick="execute()">Исполнено</button></th>
+              </tr>
+              <tr>
+                <th>4</th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th><button onclick="execute()">Исполнено</button></th>
+              </tr>
+              <tr>
+                <th>5</th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th><button onclick="execute()">Исполнено</button></th>
+              </tr>
+            </thead>
+
+
+            <!-- Заполнение таблицы-->
+            <tbody id="Messages">
+              <script type="text/javascript"> 
+                $(".big").click( function(e){
+                  var ID=e.currentTarget.id;
+                  console.log(ID);
+                  Allthis(+ID);
+                });
+              </script>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
